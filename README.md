@@ -28,38 +28,13 @@
 ### Шаг 2: Создание ядра OneScript
 Ядро Jupyter Notebook — это программа, которая взаимодействует с Jupyter через протокол ZeroMQ. Мы будем использовать Python для создания интерфейса между Jupyter и OneScript.
 
-#### 1. Создайте файл `onescript_kernel.py`
-Этот файл будет содержать логику ядра для OneScript.
+#### 1. Скопируйте каталог с ядром из репозитория в каталог ~/.local/share/jupyter/
+Эти файлы содержат логику ядра для OneScript.
+Должно получиться:
+~/.local/share/jupyter/kernels/onescript/kernel.json
+~/.local/share/jupyter/kernels/onescript/onescript_kernel.py
 
----
-
-### Шаг 3: Установка ядра
-1. **Создайте файл `kernel.json`**:
-   Этот файл описывает метаданные ядра для Jupyter. Создайте директорию для ядра, например:
-   ```bash
-   mkdir -p ~/.local/share/jupyter/kernels/onescript
-   ```
-   Внутри этой директории создайте файл `kernel.json` со следующим содержимым:
-   ```json
-   {
-       "argv": [
-           "python3",
-           "-m",
-           "onescript_kernel",
-           "-f",
-           "{connection_file}"
-       ],
-       "display_name": "OneScript",
-       "language": "onescript"
-   }
-   ```
-
-2. **Создайте модуль Python для ядра**:
-   Сохраните файл `onescript_kernel.py` в той же директории, где находится `kernel.json`.
-
----
-
-### Шаг 4: Запуск Jupyter Notebook
+### Шаг 3: Запуск Jupyter Notebook
 1. Запустите Jupyter Notebook:
    ```bash
    jupyter notebook
