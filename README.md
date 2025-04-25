@@ -1,4 +1,4 @@
-# onescript-kernel-jutyter
+# onescript-kernel-jupyter
 Ядро onescript для jupyter notebook
 
 Для создания ядра Jupyter Notebook, которое будет использовать язык программирования OneScript, необходимо выполнить несколько шагов. OneScript — это скриптовый язык, совместимый с 1С:Предприятие, и для его интеграции в Jupyter потребуется создать пользовательское ядро.
