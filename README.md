@@ -31,7 +31,9 @@
 #### 1. Скопируйте каталог с ядром из репозитория в каталог ~/.local/share/jupyter/
 Эти файлы содержат логику ядра для OneScript.
 Должно получиться:
+
 ~/.local/share/jupyter/kernels/onescript/kernel.json
+
 ~/.local/share/jupyter/kernels/onescript/onescript_kernel.py
 
 ### Шаг 3: Запуск Jupyter Notebook
@@ -54,3 +56,5 @@ a = 5 + 3;
 ```
 
 Результат выполнения будет отображаться в ячейке вывода.
+
+![result](https://github.com/user-attachments/assets/6e01e457-6cb6-491f-8c85-9cb84d8b14ba)
