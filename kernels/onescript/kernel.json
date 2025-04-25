@@ -1,0 +1,11 @@
+{
+    "argv": [
+        "python3",
+        "-m",
+        "onescript_kernel",
+        "-f",
+        "{connection_file}"
+    ],
+    "display_name": "OneScript",
+    "language": "onescript"
+}
