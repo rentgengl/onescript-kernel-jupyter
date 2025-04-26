@@ -22,15 +22,11 @@ class OneScriptKernel(Kernel):
         handler = logging.StreamHandler()
         handler.setLevel(logging.INFO)
         self.log.addHandler(handler)
-        print("init qqq")
-        self.log.info("Initializing qqq")
 
     def do_execute(self, code, silent, store_history=True, user_expressions=None, allow_stdin=False):
         # Создаем временный файл для хранения кода
         if code[0:4]=="opm ":
-            # Установка пакетов пока не работает - нужно разбираться
-            comand=code
-            params=''
+            runb=code.split(" ")
         else:
             # Создаем временный файл для хранения кода
             with tempfile.NamedTemporaryFile(suffix='.os', mode='w', delete=False) as temp_file:
@@ -39,13 +35,12 @@ class OneScriptKernel(Kernel):
 
             comand='oscript'
             params=temp_file_path
-
-            
+            runb=[comand, params]
         
         try:
             # Выполняем файл через OneScript
             result = subprocess.run(
-                [comand, params],
+                runb,
                 capture_output=True,
                 text=True
             )
@@ -77,8 +72,6 @@ class OneScriptKernel(Kernel):
         }
 
     def do_shutdown(self, restart):
-        print("shutdown")
-        self.log.info("Shutting down qqq")
         pass  # Нет процессов, которые нужно завершать
 
 if __name__ == '__main__':
