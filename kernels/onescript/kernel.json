@@ -1,8 +1,7 @@
 {
     "argv": [
-        "python3",
-        "-m",
-        "onescript_kernel",
+        "python",
+        "/usr/local/share/jupyter/kernels/onescript/onescript_kernel.py",
         "-f",
         "{connection_file}"
     ],

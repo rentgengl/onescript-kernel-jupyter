@@ -26,21 +26,19 @@ class OneScriptKernel(Kernel):
     def do_execute(self, code, silent, store_history=True, user_expressions=None, allow_stdin=False):
         # Создаем временный файл для хранения кода
         if code[0:4]=="opm ":
-            runb=code.split(" ")
+            comand=code.split(" ")
         else:
             # Создаем временный файл для хранения кода
             with tempfile.NamedTemporaryFile(suffix='.os', mode='w', delete=False) as temp_file:
                 temp_file.write(code)
                 temp_file_path = temp_file.name
 
-            comand='oscript'
-            params=temp_file_path
-            runb=[comand, params]
+            comand=['oscript', temp_file_path]
         
         try:
             # Выполняем файл через OneScript
             result = subprocess.run(
-                runb,
+                comand,
                 capture_output=True,
                 text=True
             )
