@@ -19,7 +19,7 @@
 ### Запустите контейнер
 Для запуска контейнера выполните команду
    ```bash
-   docker run -p 8888:8888 jupyter-onescript   
+   docker run -e NOTEBOOK_ARGS="--NotebookApp.token='' --ip=0.0.0.0" -p 8888:8888 jupyter-onescript  
    ```
 
 ## Запуск без контейнера
