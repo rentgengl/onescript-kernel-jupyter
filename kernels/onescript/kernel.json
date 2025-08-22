@@ -5,6 +5,6 @@
         "-f",
         "{connection_file}"
     ],
-    "display_name": "OneScript",
-    "language": "onescript"
+    "display_name": "bsl",
+    "language": "bsl"
 }

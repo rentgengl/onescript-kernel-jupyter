@@ -1,0 +1,13 @@
+{
+  "language_servers": {
+    "bsl-server-implementation": {
+      "version": 2,
+      "argv": [
+        "java",
+        "-jar",
+        "/opt/bsl-language-server/bsl-language-server-0.24.2-exec.jar"
+      ],
+      "languages": ["bsl"]
+    }
+  }
+}

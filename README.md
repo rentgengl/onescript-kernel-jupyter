@@ -5,6 +5,12 @@
 
 Ниже приведен пошаговый план и пример кода для реализации такого ядра.
 
+## Upd 2025.08.21
+- Добавлен синтаксис-контроль с помощью связки [BSL Language Server](https://1c-syntax.github.io/bsl-language-server/dev/) и [jupyter-lsp](https://jupyterlab-lsp.readthedocs.io/en/latest/index.html)
+- Добавлен файл Example1C.ipynb с примерами использования движка OneScript
+
+
+
 ## Запуск в контейнере
 Для запуска контейнера необходимо собрать его образ
 

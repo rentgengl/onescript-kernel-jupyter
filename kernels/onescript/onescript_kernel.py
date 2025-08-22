@@ -4,16 +4,16 @@ from ipykernel.kernelbase import Kernel
 import logging
 
 class OneScriptKernel(Kernel):
-    implementation = 'OneScript'
-    implementation_version = '1.0'
-    language = 'onescript'
-    language_version = '1.0'
+    implementation = 'bsl'
+    implementation_version = '1.0.2'
+    language = 'bsl'
+    language_version = '1.0.2'
     language_info = {
-        'name': 'OneScript',
-        'mimetype': 'text/plain',
-        'file_extension': '.os',
+        'name': 'bsl',
+        'mimetype': 'text/bsl',
+        'file_extension': '.bsl',
     }
-    banner = "OneScript kernel for Jupyter Notebook"
+    banner = "OneScript kernel for Jupyter Lab"
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
